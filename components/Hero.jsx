@@ -7,15 +7,18 @@ const stats = [
   { num: 100, suffix: '%', label: 'Transparency at every step' },
 ]
 
-const workflowChips = [
-  { label: 'Approvals', icon: 'bi-check2-circle', x: '6%',  y: '18%', delay: 0 },
-  { label: 'Inventory', icon: 'bi-boxes',         x: '82%', y: '14%', delay: 0.4 },
-  { label: 'HR & Onboarding', icon: 'bi-person-vcard', x: '3%', y: '62%', delay: 0.8 },
-  { label: 'Field Service', icon: 'bi-geo-alt',   x: '86%', y: '60%', delay: 0.2 },
-  { label: 'CRM Add-ons', icon: 'bi-diagram-3',   x: '14%', y: '82%', delay: 0.6 },
-  { label: 'Partner Portals', icon: 'bi-shield-lock', x: '78%', y: '84%', delay: 1.0 },
-  { label: 'Deluge', icon: 'bi-code-slash',       x: '92%', y: '38%', delay: 1.2 },
-  { label: 'Zoho Books', icon: 'bi-journal-text', x: '0%',  y: '40%', delay: 1.4 },
+const reviewers = [
+  { t: 'SV', c: '#2563eb' },
+  { t: 'SS', c: '#dc2626' },
+  { t: 'KP', c: '#f59e0b' },
+]
+
+const contactBtns = [
+  { label: 'Call', icon: 'bi-telephone', href: 'tel:+918190009222' },
+  { label: 'WhatsApp', icon: 'bi-whatsapp', href: 'https://wa.me/918190009222', accent: '#16a34a' },
+  { label: 'Email', icon: 'bi-envelope', href: 'mailto:info@zoflowx.com' },
+  { label: 'Schedule', icon: 'bi-calendar-check', href: 'https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation' },
+  { label: 'Live Chat', icon: 'bi-chat-dots', href: '#' },
 ]
 
 export default function Hero() {
@@ -44,33 +47,11 @@ export default function Hero() {
   }, [])
 
   return (
-    <section id="hero" style={{ background: 'linear-gradient(160deg,#faf9f7 0%,#f0ece8 100%)', padding: '90px 0 80px', position: 'relative', overflow: 'hidden' }}>
+    <section id="hero" style={{ background: 'linear-gradient(180deg,#fdfaf4 0%,#fcf3e6 55%,#fbeede 100%)', padding: '90px 0 80px', position: 'relative', overflow: 'hidden' }}>
       {/* gradient blobs */}
-      <div aria-hidden style={{ position: 'absolute', width: 480, height: 480, top: -180, left: -120, background: 'radial-gradient(circle at center, rgba(59,130,246,0.16), transparent 60%)', animation: 'blob-drift 14s ease-in-out infinite', pointerEvents: 'none' }} />
+      <div aria-hidden style={{ position: 'absolute', width: 480, height: 480, top: -180, left: -120, background: 'radial-gradient(circle at center, rgba(59,130,246,0.14), transparent 60%)', animation: 'blob-drift 14s ease-in-out infinite', pointerEvents: 'none' }} />
       <div aria-hidden style={{ position: 'absolute', width: 520, height: 520, bottom: -220, right: -160, background: 'radial-gradient(circle at center, rgba(249,115,22,0.12), transparent 60%)', animation: 'blob-drift 18s ease-in-out infinite reverse', pointerEvents: 'none' }} />
       <div aria-hidden style={{ position: 'absolute', inset: 0, opacity: 0.5 }} className="dot-grid" />
-
-      {/* Floating workflow chips */}
-      {/* <div aria-hidden style={{ position: 'absolute', inset: 0, pointerEvents: 'none', overflow: 'hidden' }}>
-        {workflowChips.map((c, i) => (
-          <div key={c.label}
-            className="d-none d-md-inline-flex"
-            style={{
-              position: 'absolute', left: c.x, top: c.y,
-              background: 'rgba(255,255,255,0.85)', backdropFilter: 'blur(6px)',
-              border: '1px solid #e8e3dd', borderRadius: 999, padding: '7px 14px',
-              fontSize: '0.78rem', fontFamily: 'Inter,sans-serif', fontWeight: 600,
-              color: '#334155', opacity: 0.92,
-              boxShadow: '0 6px 20px rgba(15,23,42,0.06)',
-              alignItems: 'center', gap: 8,
-              animation: `float-y ${5 + (i % 3) * 1.2}s ease-in-out ${c.delay}s infinite`,
-              whiteSpace: 'nowrap',
-            }}>
-            <i className={`bi ${c.icon}`} style={{ color: i % 2 ? '#f97316' : '#1a56db', fontSize: '0.9rem' }} />
-            {c.label}
-          </div>
-        ))}
-      </div> */}
 
       <div className="container position-relative text-center" style={{ zIndex: 2 }}>
         {/* Badge */}
@@ -89,11 +70,40 @@ export default function Hero() {
           built for the way your <span className="grad-blue-red">business actually runs</span>
         </h1>
 
-        <p style={{ fontSize: '1.1rem', color: '#475569', maxWidth: 640, margin: '0 auto 38px', lineHeight: 1.75, fontFamily: 'Inter,sans-serif' }}>
+        <p style={{ fontSize: '1.1rem', color: '#475569', maxWidth: 640, margin: '0 auto 30px', lineHeight: 1.75, fontFamily: 'Inter,sans-serif' }}>
           Don't force your team to use spreadsheets and off-the-shelf software. We create, develop and deploy custom Zoho Creator apps that fit your workflow - from concept to live in <strong style={{ color: '#0f172a' }}>weeks, not months</strong>.
         </p>
 
-        <div style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 64 }}>
+        {/* Review pill */}
+        <div style={{ marginBottom: 34, display: 'flex', justifyContent: 'center' }}>
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: 16,
+            background: '#fff', border: '1px solid #ece6df', borderRadius: 999,
+            padding: '10px 22px', boxShadow: '0 8px 24px rgba(15,23,42,0.06)',
+          }}>
+            {/* Avatars */}
+            <div style={{ display: 'flex' }}>
+              {reviewers.map((a, i) => (
+                <span key={a.t} style={{
+                  width: 34, height: 34, borderRadius: '50%', background: a.c,
+                  color: '#fff', fontSize: '0.72rem', fontWeight: 700, fontFamily: 'Inter,sans-serif',
+                  display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                  border: '2px solid #fff', marginLeft: i === 0 ? 0 : -10,
+                }}>{a.t}</span>
+              ))}
+            </div>
+            {/* Stars + rating */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
+              <span style={{ display: 'inline-flex', gap: 2, color: '#f59e0b' }}>
+                {[...Array(5)].map((_, i) => <i key={i} className="bi bi-star-fill" style={{ fontSize: '0.95rem' }} />)}
+              </span>
+              <span style={{ fontFamily: 'Inter,sans-serif', fontWeight: 700, color: '#0f172a', fontSize: '0.98rem' }}>5/5</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Primary CTAs */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 20 }}>
           <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" target="_blank" rel="noreferrer" className="btn-gradient ahover" style={{ padding: '0.85rem 1.9rem', fontSize: '0.95rem' }}>
             Get Your Free App Blueprint <i className="bi bi-arrow-right" />
           </a>
@@ -103,6 +113,28 @@ export default function Hero() {
           >
             See What We Build <i className="bi bi-grid-3x3-gap" />
           </a>
+        </div>
+
+        {/* Contact buttons */}
+        <div style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 64 }}>
+          {contactBtns.map(b => (
+            <a key={b.label} href={b.href}
+              target={b.href.startsWith('http') ? '_blank' : undefined}
+              rel={b.href.startsWith('http') ? 'noreferrer' : undefined}
+              style={{
+                display: 'inline-flex', alignItems: 'center', gap: 8,
+                background: '#fff', border: '1px solid #e8e3dd', borderRadius: 10,
+                padding: '0.6rem 1.15rem', fontFamily: 'Inter,sans-serif', fontWeight: 600,
+                fontSize: '0.9rem', color: b.accent || '#334155', textDecoration: 'none',
+                transition: 'all 0.2s',
+              }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = b.accent || '#0f172a'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 6px 18px rgba(15,23,42,0.08)' }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = '#e8e3dd'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = 'none' }}
+            >
+              <i className={`bi ${b.icon}`} style={{ fontSize: '1rem', color: b.accent || '#2563eb' }} />
+              {b.label}
+            </a>
+          ))}
         </div>
 
         {/* Stats - premium glass card */}
