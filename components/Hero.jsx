@@ -109,7 +109,7 @@ export default function Hero() {
         <div ref={statsRef} style={{
           display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 0,
           padding: '36px 32px', background: '#fff',
-          border: '1px solid #e8e3dd', borderRadius: 24, maxWidth: 1320, margin: '0 auto',
+          border: '1px solid #e8e3dd', borderRadius: 24, maxWidth: 1120, margin: '0 auto',
           boxShadow: '0 24px 60px rgba(15,23,42,0.07), 0 1px 0 rgba(255,255,255,0.5) inset',
           position: 'relative', overflow: 'hidden',
         }}>
