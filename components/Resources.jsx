@@ -7,21 +7,21 @@ const articles = [
     tagColor: '#1a56db',
     readTime: '6 min read',
     title: 'When to Use Zoho Creator vs Zoho CRM: A Practical Decision Tree',
-    desc: 'CRM is for sales pipelines. Creator is for everything else your team touches. Here\'s the simple test we use with clients to pick the right tool — and avoid an expensive rewrite.',
+    desc: 'CRM is for sales pipelines. Creator is for everything else your team touches. Here\'s the simple test we use with clients to pick the right tool - and avoid an expensive rewrite.',
   },
   {
     tag: 'Playbook',
     tagColor: '#8b5cf6',
     readTime: '8 min read',
     title: '5 Workflows Every Mid-Sized Business Should Move Off Spreadsheets',
-    desc: 'Purchase approvals, leave management, vendor onboarding, asset tracking, and project sign-offs — the five workflows that quietly cost teams hours every week.',
+    desc: 'Purchase approvals, leave management, vendor onboarding, asset tracking, and project sign-offs - the five workflows that quietly cost teams hours every week.',
   },
   {
     tag: 'Tutorial',
     tagColor: '#f97316',
     readTime: '10 min read',
     title: 'Deluge Patterns: Writing Maintainable Zoho Creator Code',
-    desc: 'A walkthrough of the conventions we use across every ZoFlowX build — so the next developer (or future you) can read what was written six months ago.',
+    desc: 'A walkthrough of the conventions we use across every ZoFlowX build - so the next developer (or future you) can read what was written six months ago.',
   },
 ]
 
@@ -41,8 +41,8 @@ export default function Resources() {
         <div className="row align-items-end mb-5 fade-up">
           <div className="col-lg-8">
             <div className="section-label">From Our Blog</div>
-            <h2 className="section-title">Insights & <span className="grad-blue-purple">Articles</span></h2>
-            <p className="section-sub">Practical insights on Zoho, automation, and business operations — focused on simplifying workflows, improving efficiency, and helping teams build better systems.</p>
+            <h2 className="section-title" style={{ fontWeight: 600 }}>Insights & <span className="grad-blue-purple">Articles</span></h2>
+            <p className="section-sub">Practical insights on Zoho, automation, and business operations - focused on simplifying workflows, improving efficiency, and helping teams build better systems.</p>
           </div>
           <div className="col-lg-4 text-lg-end mt-3 mt-lg-0">
             <a href="#" className="btn-outline-custom ahover">Browse all articles <i className="bi bi-arrow-right" /></a>
@@ -86,9 +86,9 @@ export default function Resources() {
                     </div>
                   </div>
                   <div style={{ padding: 26, flex: 1, display: 'flex', flexDirection: 'column' }}>
-                    <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#0f172a', marginBottom: 12, lineHeight: 1.4, fontFamily: 'Plus Jakarta Sans,sans-serif' }}>{a.title}</h3>
+                    <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#0f172a', marginBottom: 12, lineHeight: 1.4, fontFamily: 'inter Sans,sans-serif' }}>{a.title}</h3>
                     <p style={{ fontSize: '0.88rem', color: '#64748b', lineHeight: 1.65, marginBottom: 18, fontFamily: 'Inter,sans-serif', flex: 1 }}>{a.desc}</p>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.85rem', fontWeight: 700, color: '#0f172a', fontFamily: 'Plus Jakarta Sans,sans-serif', marginTop: 'auto' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: '0.85rem', fontWeight: 700, color: '#0f172a', fontFamily: 'inter Sans,sans-serif', marginTop: 'auto' }}>
                       Read article <i className="bi bi-arrow-right art-arrow" style={{ color: '#94a3b8', transition: 'all 0.25s' }} />
                     </div>
                   </div>

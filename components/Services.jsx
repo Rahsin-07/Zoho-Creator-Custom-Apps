@@ -6,7 +6,7 @@ const services = [
     num: '01',
     icon: 'bi-check2-circle',
     title: 'Workflow & Approval Apps',
-    desc: 'Say goodbye to email chains, paper forms, and chaos — and hello to clean approval flows for purchases, leaves, expenses, and more.',
+    desc: 'Say goodbye to email chains, paper forms, and chaos - and hello to clean approval flows for purchases, leaves, expenses, and more.',
     cta: 'Build my approval app',
     color: '#1a56db',
   },
@@ -22,7 +22,7 @@ const services = [
     num: '03',
     icon: 'bi-person-vcard',
     title: 'HR & Employee Self-Service',
-    desc: 'Onboarding, attendance, leave, payroll inputs, and helpdesks — all based on your policies, not generic templates.',
+    desc: 'Onboarding, attendance, leave, payroll inputs, and helpdesks - all based on your policies, not generic templates.',
     cta: 'Get an HR app quote',
     color: '#10b981',
   },
@@ -30,7 +30,7 @@ const services = [
     num: '04',
     icon: 'bi-geo-alt',
     title: 'Field Service & Mobile Apps',
-    desc: 'Provide your field team with an app that is phone-friendly, can take photos, sync jobs and update HQ live — even without an internet connection.',
+    desc: 'Provide your field team with an app that is phone-friendly, can take photos, sync jobs and update HQ live - even without an internet connection.',
     cta: 'Design my field app',
     color: '#f97316',
   },
@@ -90,11 +90,11 @@ function AppCard({ s, delay }) {
           <div className="svc-icon" style={{ width: 52, height: 52, borderRadius: 14, background: `${s.color}15`, color: s.color, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem', transition: 'all 0.3s' }}>
             <i className={`bi ${s.icon}`} />
           </div>
-          <div style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.85rem', fontWeight: 800, color: '#cbd5e1', letterSpacing: 1.5 }}>{s.num}</div>
+          <div style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '0.85rem', fontWeight: 600, color: '#cbd5e1', letterSpacing: 1.5 }}>{s.num}</div>
         </div>
-        <h3 style={{ fontSize: '1.12rem', fontWeight: 700, marginBottom: 12, color: '#0f172a', fontFamily: 'Plus Jakarta Sans,sans-serif', lineHeight: 1.3 }}>{s.title}</h3>
+        <h3 style={{ fontSize: '1.12rem', fontWeight: 700, marginBottom: 12, color: '#0f172a', fontFamily: 'inter Sans,sans-serif', lineHeight: 1.3 }}>{s.title}</h3>
         <p style={{ fontSize: '0.9rem', color: '#64748b', lineHeight: 1.7, marginBottom: 20, fontFamily: 'Inter,sans-serif' }}>{s.desc}</p>
-        <a href="#consultation" className="svc-cta" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '0.85rem', fontWeight: 700, color: '#0f172a', textDecoration: 'none', fontFamily: 'Plus Jakarta Sans,sans-serif', transition: 'all 0.25s' }}>
+        <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" target="_blank" rel="noreferrer" className="svc-cta" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '0.85rem', fontWeight: 700, color: '#fff', textDecoration: 'none', fontFamily: 'inter Sans,sans-serif', transition: 'all 0.25s' }}>
           {s.cta} <i className="bi bi-arrow-right" />
         </a>
       </div>
@@ -118,8 +118,8 @@ export default function Services() {
         <div className="row align-items-end mb-5 fade-up">
           <div className="col-lg-8">
             <div className="section-label">Custom Apps We Build</div>
-            <h2 className="section-title">Tell us the problem. <span className="grad-purple-orange">We'll show you the app.</span></h2>
-            <p className="section-sub">From simple internal tools to full-blown business systems, ZoFlowX builds Zoho Creator apps that fit your team — not the other way around. Here are the apps clients ask us for the most.</p>
+            <h2 className="section-title" style={{ fontWeight: 600 }}>Tell us the problem. <span className="grad-blue-red">We'll show you the app.</span></h2>
+            <p className="section-sub">From simple internal tools to full-blown business systems, ZoFlowX builds Zoho Creator apps that fit your team - not the other way around. Here are the apps clients ask us for the most.</p>
           </div>
         </div>
 
@@ -137,15 +137,15 @@ export default function Services() {
           <div className="row align-items-center position-relative g-4">
             <div className="col-lg-8">
               <div style={{ fontSize: '0.72rem', fontWeight: 600, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#f97316', marginBottom: 12 }}>Not sure which app?</div>
-              <h3 style={{ color: '#fff', fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: 'clamp(1.4rem,2.4vw,1.9rem)', marginBottom: 8, lineHeight: 1.2, letterSpacing: '-0.3px' }}>
-                Not sure which app you need? Let's plan it together — free.
+              <h3 style={{ color: '#fff', fontFamily: 'inter Sans,sans-serif', fontSize: 'clamp(1.4rem,2.4vw,1.9rem)', marginBottom: 8, lineHeight: 1.2, letterSpacing: '-0.3px' }}>
+                Not sure which app you need? Let's plan it together - free.
               </h3>
               <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.95rem', marginBottom: 0, fontFamily: 'Inter,sans-serif' }}>
                 30 minutes. Zero pressure. Walk away with a written blueprint and fixed cost.
               </p>
             </div>
             <div className="col-lg-4 text-lg-end">
-              <a href="#consultation" className="btn-accent ahover">Book My Free Workshop <i className="bi bi-arrow-right" /></a>
+              <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" target="_blank" rel="noreferrer" className="btn-accent ahover">Book My Free Workshop <i className="bi bi-arrow-right" /></a>
             </div>
           </div>
         </div>

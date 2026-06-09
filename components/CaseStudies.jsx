@@ -16,7 +16,7 @@ const cases = [
     title: 'Lead-to-Sale Pipeline + Site Visit App',
     gradient: 'linear-gradient(135deg,#7c3aed,#a855f7)',
     metrics: [{ num: '2.4×', label: 'Site visits per agent' }, { num: '38%', label: 'Faster deal closure' }],
-    desc: 'Built a connected Creator + CRM workflow with WhatsApp routing, geo-tagged site visits, and an owner portal for live status — replacing five disconnected tools.',
+    desc: 'Built a connected Creator + CRM workflow with WhatsApp routing, geo-tagged site visits, and an owner portal for live status - replacing five disconnected tools.',
   },
   {
     industry: 'Logistics',
@@ -44,7 +44,7 @@ export default function CaseStudies() {
         <div className="row align-items-end mb-5 fade-up">
           <div className="col-lg-8">
             <div className="section-label">Case Studies</div>
-            <h2 className="section-title">Real outcomes from <span className="grad-blue-purple">our work</span></h2>
+            <h2 className="section-title" style={{ fontWeight: 600 }}>Real outcomes from <span className="grad-blue-red">our work</span></h2>
             <p className="section-sub">Real numbers from real clients. The kind of results that make finance teams smile and operations teams sleep better at night.</p>
           </div>
           <div className="col-lg-4 text-lg-end mt-3 mt-lg-0">
@@ -68,7 +68,7 @@ export default function CaseStudies() {
                     </div>
                     <div style={{ fontSize: '0.72rem', fontWeight: 700, letterSpacing: '1.5px', textTransform: 'uppercase', opacity: 0.85, fontFamily: 'Inter,sans-serif' }}>{c.industry}</div>
                   </div>
-                  <h3 style={{ position: 'relative', fontSize: '1.12rem', fontWeight: 700, fontFamily: 'Plus Jakarta Sans,sans-serif', lineHeight: 1.35, marginBottom: 0 }}>{c.title}</h3>
+                  <h3 style={{ position: 'relative', fontSize: '1.12rem', fontWeight: 700, fontFamily: 'inter Sans,sans-serif', lineHeight: 1.35, marginBottom: 0 }}>{c.title}</h3>
                 </div>
                 <div style={{ padding: '28px 30px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap', marginBottom: 18, paddingBottom: 18, borderBottom: '1px dashed #e8e3dd' }}>

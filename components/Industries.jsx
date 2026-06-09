@@ -29,8 +29,8 @@ export default function Industries() {
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <span className="section-label">Who We Work With</span>
           </div>
-          <h2 className="section-title">Industries we support with <span className="grad-blue-purple">custom apps</span></h2>
-          <p className="section-sub mx-auto">We create Zoho Creator applications for various industries. If your business is built on processes, people and paperwork — we can help streamline it.</p>
+          <h2 className="section-title" style={{ fontWeight: 600 }}>Industries we support with <span className="grad-blue-red">custom apps</span></h2>
+          <p className="section-sub mx-auto">We create Zoho Creator applications for various industries. If your business is built on processes, people and paperwork - we can help streamline it.</p>
         </div>
 
         <div className="row g-4">
@@ -63,12 +63,12 @@ export default function Industries() {
                 }}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 18 }}>
-                  <div className="ind-icon" style={{ width: 52, height: 52, borderRadius: 12, background: '#eff6ff', color: '#1a56db', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.35rem', transition: 'all 0.35s' }}>
+                  <div className="ind-icon" style={{ width: 52, height: 52, borderRadius: 12, background: '#fee2e2', color: '#dc2626', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.35rem', transition: 'all 0.35s' }}>
                     <i className={`bi ${ind.icon}`} />
                   </div>
                   <i className="bi bi-arrow-up-right ind-arrow" style={{ color: '#cbd5e1', fontSize: '1.1rem', transition: 'all 0.3s' }} />
                 </div>
-                <h3 style={{ fontSize: '1.02rem', fontWeight: 700, color: '#0f172a', marginBottom: 6, fontFamily: 'Plus Jakarta Sans,sans-serif' }}>{ind.title}</h3>
+                <h3 style={{ fontSize: '1.02rem', fontWeight: 700, color: '#0f172a', marginBottom: 6, fontFamily: 'inter Sans,sans-serif' }}>{ind.title}</h3>
                 <p style={{ fontSize: '0.86rem', color: '#64748b', lineHeight: 1.6, marginBottom: 0, fontFamily: 'Inter,sans-serif' }}>{ind.desc}</p>
               </div>
             </div>
@@ -76,7 +76,7 @@ export default function Industries() {
         </div>
 
         <div className="fade-up text-center" style={{ marginTop: 44 }}>
-          <a href="#consultation" className="link-reveal" style={{ fontSize: '0.95rem' }}>
+          <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" target="_blank" rel="noreferrer" className="link-reveal" style={{ fontSize: '0.95rem' }}>
             Don't see your industry? Talk to us <i className="bi bi-arrow-right" />
           </a>
         </div>

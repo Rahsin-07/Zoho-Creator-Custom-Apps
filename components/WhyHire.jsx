@@ -29,7 +29,7 @@ export default function WhyHire() {
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <span className="section-label">Why ZoFlowX</span>
           </div>
-          <h2 className="section-title">Eight reasons teams pick us over <span className="grad-blue-red">"any" Zoho developer</span></h2>
+          <h2 className="section-title" style={{ fontWeight: 600 }}>Eight reasons teams pick us over <span className="grad-blue-red">"any" Zoho developer</span></h2>
           <p className="section-sub mx-auto">Any user can drag and drop a form. Creating a Zoho Creator app that scales with your business is another art. Here's what sets ZoFlowX apart.</p>
         </div>
 
@@ -64,7 +64,7 @@ export default function WhyHire() {
                   </div>
                   <div className="r-num grad-num" style={{ fontSize: '1.1rem', opacity: 0.5, transition: 'opacity 0.3s' }}>{r.num}</div>
                 </div>
-                <h3 style={{ fontSize: '1.02rem', fontWeight: 700, color: '#0f172a', marginBottom: 8, fontFamily: 'Plus Jakarta Sans,sans-serif', lineHeight: 1.3 }}>{r.title}</h3>
+                <h3 style={{ fontSize: '1.02rem', fontWeight: 700, color: '#0f172a', marginBottom: 8, fontFamily: 'inter Sans,sans-serif', lineHeight: 1.3 }}>{r.title}</h3>
                 <p style={{ fontSize: '0.86rem', color: '#64748b', lineHeight: 1.65, marginBottom: 0, fontFamily: 'Inter,sans-serif' }}>{r.desc}</p>
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function WhyHire() {
         </div>
 
         <div className="text-center mt-5 fade-up">
-          <a href="#consultation" className="btn-gradient ahover" style={{ padding: '0.85rem 2rem' }}>
+          <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" target="_blank" rel="noreferrer" className="btn-gradient ahover" style={{ padding: '0.85rem 2rem' }}>
             Let's Plan Your App <i className="bi bi-arrow-right" />
           </a>
         </div>

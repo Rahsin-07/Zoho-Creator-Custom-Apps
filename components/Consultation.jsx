@@ -1,108 +1,131 @@
 'use client'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
-const options = [
-  { icon: 'bi-calendar-event', color: '#f97316', title: 'Book My Free Strategy Call', sub: '30 mins · Zoho Bookings', href: 'https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation' },
-  { icon: 'bi-file-earmark-text', color: '#1a56db', title: 'Send Me a Sample Blueprint', sub: 'See exactly what you\'ll get', href: 'mailto:info@zoflowx.com?subject=Send%20me%20a%20sample%20blueprint' },
-  { icon: 'bi-telephone', color: '#10b981', title: 'Talk to a developer now', sub: 'Mon–Fri, 10am–7pm IST', href: 'tel:+918190009222' },
+// Section 16 — Get In Touch (contact cards + requirement form)
+const channels = [
+  { icon: 'bi-whatsapp',   color: '#16a34a', label: 'WhatsApp', value: '+91 81900 09222', href: 'https://wa.me/918190009222', sub: 'Chat with our team' },
+  { icon: 'bi-envelope',   color: '#2563eb', label: 'Email',    value: 'info@zoflowx.com', href: 'mailto:info@zoflowx.com',     sub: 'We reply within a day' },
+  { icon: 'bi-telephone',  color: '#dc2626', label: 'Call',     value: '+91 81900 09222', href: 'tel:+918190009222',           sub: 'Mon–Sat, 9am–11pm IST' },
 ]
 
-export default function Consultation() {
+export default function GetInTouch() {
   const ref = useRef(null)
+  const [form, setForm] = useState({ name: '', email: '', phone: '', requirement: '' })
+
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target) } })
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target) }
+      })
     }, { threshold: 0.1 })
     ref.current?.querySelectorAll('.fade-up').forEach(el => observer.observe(el))
     return () => observer.disconnect()
   }, [])
 
+  const set = (k) => (e) => setForm(f => ({ ...f, [k]: e.target.value }))
+
+  const handleSubmit = () => {
+    const subject = encodeURIComponent(`New Zoho requirement from ${form.name || 'website'}`)
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n\nRequirement:\n${form.requirement}`
+    )
+    window.location.href = `mailto:info@zoflowx.com?subject=${subject}&body=${body}`
+  }
+
+  const inputStyle = {
+    width: '100%', padding: '13px 16px', borderRadius: 12,
+    border: '1px solid #e8e3dc', background: '#fafaf7', outline: 'none',
+    fontSize: '0.95rem', fontFamily: 'Inter,sans-serif', color: '#0b1220',
+    transition: 'border-color 0.2s, box-shadow 0.2s',
+  }
+  const focus = (e) => { e.target.style.borderColor = '#2563eb'; e.target.style.boxShadow = '0 0 0 3px rgba(37,99,235,0.12)' }
+  const blur = (e) => { e.target.style.borderColor = '#e8e3dc'; e.target.style.boxShadow = 'none' }
+
   return (
-    <section id="consultation" style={{ background: 'linear-gradient(135deg,#0f172a 0%,#1e3a8a 100%)', position: 'relative', overflow: 'hidden' }} ref={ref}>
-      <div aria-hidden style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse at 30% 30%,rgba(99,179,237,0.15) 0%,transparent 55%), radial-gradient(ellipse at 80% 80%,rgba(249,115,22,0.1) 0%,transparent 50%)', pointerEvents: 'none' }} />
-      <div aria-hidden style={{ position: 'absolute', inset: 0, opacity: 0.25 }} className="dot-grid-light" />
+    <section id="get-in-touch" ref={ref} style={{ background: '#fff', position: 'relative', overflow: 'hidden' }}>
+      <div aria-hidden style={{ position: 'absolute', top: '-10%', left: '-6%', width: 440, height: 440, background: 'radial-gradient(circle, rgba(37,99,235,0.08), transparent 65%)', filter: 'blur(40px)' }} />
 
       <div className="container position-relative">
-        <div className="row align-items-center g-5">
-          <div className="col-lg-6 fade-up">
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: '0.72rem', fontWeight: 600, letterSpacing: '2.5px', textTransform: 'uppercase', color: '#f97316', marginBottom: 16 }}>
-              <span style={{ width: 24, height: 1.5, background: 'currentColor' }} />
-              Let's Build It
-            </span>
-            <h2 style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: 'clamp(2rem,4.2vw,3rem)', fontWeight: 800, color: '#fff', marginBottom: 20, letterSpacing: '-0.6px', lineHeight: 1.12 }}>
-              Your next great app is one <span style={{ background: 'linear-gradient(90deg,#93c5fd,#f97316)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>30-minute call</span> away
-            </h2>
-            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.02rem', marginBottom: 32, lineHeight: 1.75, maxWidth: 500, fontFamily: 'Inter,sans-serif' }}>
-              Tell us about your business. Within a week, you'll have a written app blueprint, fixed pricing, and a clear path to launch — built by India's leading Zoho partner.
-            </p>
+        <div className="text-center mb-5 fade-up" style={{ maxWidth: 720, margin: '0 auto 50px' }}>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <span className="section-label section-label-blue">Get in touch</span>
+          </div>
+          <h2 className="section-title" style={{ fontWeight: 600 }}>
+            Let's build your <span className="grad-blue-red">Zoho system</span>
+          </h2>
+          <p className="section-sub mx-auto">
+            Tell us your requirements, and our team will connect with you shortly.
+          </p>
+        </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginBottom: 36 }}>
-              {['Fixed-scope pricing — no surprises','Working demo in 14 days','30 days free post-launch support'].map(c => (
-                <div key={c} style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: '0.92rem', color: 'rgba(255,255,255,0.85)', fontFamily: 'Inter,sans-serif' }}>
-                  <div style={{ width: 24, height: 24, borderRadius: '50%', background: 'rgba(16,185,129,0.2)', border: '1px solid rgba(16,185,129,0.4)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                    <i className="bi bi-check" style={{ color: '#10b981', fontSize: '0.85rem', fontWeight: 700 }} />
-                  </div>{c}
-                </div>
+        <div className="row g-4 align-items-stretch">
+          {/* LEFT — contact channels */}
+          <div className="col-lg-5 fade-up zx-sl">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 16, height: '100%' }}>
+              {channels.map(c => (
+                <a key={c.label} href={c.href}
+                  target={c.href.startsWith('http') ? '_blank' : undefined}
+                  rel={c.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  style={{
+                    display: 'flex', alignItems: 'center', gap: 16, textDecoration: 'none',
+                    background: '#fafaf7', border: '1px solid #e8e3dc', borderRadius: 18,
+                    padding: '22px 24px', flex: 1, transition: 'all 0.3s var(--ease-out)',
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = 'translateY(-4px)'
+                    e.currentTarget.style.borderColor = c.color
+                    e.currentTarget.style.boxShadow = `0 16px 36px ${c.color}1f`
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = ''
+                    e.currentTarget.style.borderColor = '#e8e3dc'
+                    e.currentTarget.style.boxShadow = 'none'
+                  }}>
+                  <div style={{
+                    width: 52, height: 52, borderRadius: 14, flexShrink: 0,
+                    background: `${c.color}15`, color: c.color,
+                    display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.4rem',
+                  }}>
+                    <i className={`bi ${c.icon}`} />
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.74rem', fontWeight: 600, letterSpacing: 1.4, textTransform: 'uppercase', color: '#94a3b8', fontFamily: 'Inter,sans-serif', marginBottom: 4 }}>{c.label}</div>
+                    <div style={{ fontFamily: 'Inter,sans-serif', fontWeight: 600, fontSize: '1.02rem', color: '#0b1220' }}>{c.value}</div>
+                    <div style={{ fontSize: '0.82rem', color: '#64748b', fontFamily: 'Inter,sans-serif', marginTop: 2 }}>{c.sub}</div>
+                  </div>
+                </a>
               ))}
-            </div>
-
-            <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '18px 22px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 14, backdropFilter: 'blur(8px)' }}>
-              <div style={{ width: 54, height: 54, borderRadius: '50%', background: 'linear-gradient(135deg,#1a56db,#3b82f6)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'Plus Jakarta Sans,sans-serif', fontWeight: 800, color: '#fff', fontSize: '1rem', flexShrink: 0, boxShadow: '0 8px 24px rgba(26,86,219,0.4)' }}>AR</div>
-              <div>
-                <div style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontWeight: 700, color: '#fff', fontSize: '0.95rem' }}>Arul Raj</div>
-                <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.55)', marginTop: 2, fontFamily: 'Inter,sans-serif' }}>Founder · 14+ years on Zoho · Ex-Oracle, Ex-Infosys</div>
-                <div style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.7)', marginTop: 6, fontStyle: 'italic', fontFamily: 'Inter,sans-serif' }}>"I personally review every blueprint before it reaches your inbox."</div>
-              </div>
             </div>
           </div>
 
-          <div className="col-lg-6 fade-up" style={{ transitionDelay: '0.15s' }}>
-            <div style={{ background: '#f5f0eb', borderRadius: 24, padding: '40px 36px', boxShadow: '0 32px 80px rgba(0,0,0,0.35)', position: 'relative', overflow: 'hidden' }}>
-              <div aria-hidden style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 6, background: 'var(--grad-tri)' }} />
-              <div aria-hidden style={{ position: 'absolute', top: -40, right: -40, width: 160, height: 160, borderRadius: '50%', background: 'radial-gradient(circle, rgba(139,92,246,0.15), transparent 70%)', pointerEvents: 'none' }} />
-
-              <div style={{ position: 'relative' }}>
-                <h3 style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '1.5rem', fontWeight: 800, color: '#0f172a', marginBottom: 6, letterSpacing: '-0.3px' }}>Pick a way to start</h3>
-                <p style={{ fontSize: '0.88rem', color: '#64748b', marginBottom: 28, fontFamily: 'Inter,sans-serif' }}>We'll respond within one working day.</p>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-                  {options.map((opt, i) => (
-                    <a key={i} href={opt.href} target={opt.href.startsWith('http') ? '_blank' : '_self'} rel="noreferrer"
-                      style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '18px 20px', background: '#fff', border: '1px solid #e8e3dd', borderRadius: 14, textDecoration: 'none', transition: 'all 0.3s cubic-bezier(.2,.7,.2,1)', cursor: 'pointer' }}
-                      onMouseEnter={e => {
-                        e.currentTarget.style.borderColor = opt.color
-                        e.currentTarget.style.transform = 'translateY(-2px)'
-                        e.currentTarget.style.boxShadow = `0 12px 32px ${opt.color}25`
-                        e.currentTarget.querySelector('.opt-arrow').style.color = opt.color
-                        e.currentTarget.querySelector('.opt-arrow').style.transform = 'translateX(4px)'
-                        e.currentTarget.querySelector('.opt-icon').style.background = opt.color
-                        e.currentTarget.querySelector('.opt-icon').style.color = '#fff'
-                      }}
-                      onMouseLeave={e => {
-                        e.currentTarget.style.borderColor = '#e8e3dd'
-                        e.currentTarget.style.transform = ''
-                        e.currentTarget.style.boxShadow = 'none'
-                        e.currentTarget.querySelector('.opt-arrow').style.color = '#94a3b8'
-                        e.currentTarget.querySelector('.opt-arrow').style.transform = ''
-                        e.currentTarget.querySelector('.opt-icon').style.background = `${opt.color}15`
-                        e.currentTarget.querySelector('.opt-icon').style.color = opt.color
-                      }}
-                    >
-                      <div className="opt-icon" style={{ width: 48, height: 48, borderRadius: 12, background: `${opt.color}15`, color: opt.color, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'all 0.3s' }}>
-                        <i className={`bi ${opt.icon}`} style={{ fontSize: '1.2rem' }} />
-                      </div>
-                      <div style={{ flex: 1, minWidth: 0 }}>
-                        <div style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontWeight: 700, fontSize: '0.93rem', color: '#0f172a', marginBottom: 3 }}>{opt.title}</div>
-                        <div style={{ fontFamily: 'Inter,sans-serif', fontSize: '0.78rem', color: '#64748b' }}>{opt.sub}</div>
-                      </div>
-                      <i className="bi bi-arrow-right opt-arrow" style={{ fontSize: '1rem', color: '#94a3b8', transition: 'all 0.3s', flexShrink: 0 }} />
-                    </a>
-                  ))}
+          {/* RIGHT — requirement form */}
+          <div className="col-lg-7 fade-up zx-sr" style={{ transitionDelay: '0.1s' }}>
+            <div style={{
+              background: '#fff', border: '1px solid #e8e3dc', borderRadius: 22,
+              padding: '34px 32px', boxShadow: '0 24px 60px rgba(11,18,32,0.08)', position: 'relative', overflow: 'hidden',
+            }}>
+              <div aria-hidden style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 4, background: 'var(--grad-tri)' }} />
+              <div className="row g-3">
+                <div className="col-sm-6">
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: 7, fontFamily: 'Inter,sans-serif' }}>Full Name</label>
+                  <input type="text" value={form.name} onChange={set('name')} onFocus={focus} onBlur={blur} placeholder="Your name" style={inputStyle} />
                 </div>
-
-                <div style={{ marginTop: 22, padding: '14px 16px', background: 'rgba(26,86,219,0.06)', borderRadius: 10, display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <i className="bi bi-shield-check" style={{ color: '#1a56db', fontSize: '1rem', flexShrink: 0 }} />
-                  <div style={{ fontSize: '0.78rem', color: '#475569', fontFamily: 'Inter,sans-serif' }}>100% free · No spam · Your data stays with us only</div>
+                <div className="col-sm-6">
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: 7, fontFamily: 'Inter,sans-serif' }}>Email Address</label>
+                  <input type="email" value={form.email} onChange={set('email')} onFocus={focus} onBlur={blur} placeholder="you@company.com" style={inputStyle} />
+                </div>
+                <div className="col-12">
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: 7, fontFamily: 'Inter,sans-serif' }}>Phone Number</label>
+                  <input type="tel" value={form.phone} onChange={set('phone')} onFocus={focus} onBlur={blur} placeholder="+91 ..." style={inputStyle} />
+                </div>
+                <div className="col-12">
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: 7, fontFamily: 'Inter,sans-serif' }}>Your Requirement</label>
+                  <textarea value={form.requirement} onChange={set('requirement')} onFocus={focus} onBlur={blur} rows={4} placeholder="Tell us what you need help with…" style={{ ...inputStyle, resize: 'vertical' }} />
+                </div>
+                <div className="col-12">
+                  <button type="button" onClick={handleSubmit} className="btn-gradient ahover" style={{ width: '100%', justifyContent: 'center', padding: '0.95rem 1.5rem' }}>
+                    Send My Requirement <i className="bi bi-arrow-right" />
+                  </button>
                 </div>
               </div>
             </div>

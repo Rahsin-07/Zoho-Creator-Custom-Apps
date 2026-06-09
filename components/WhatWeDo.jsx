@@ -17,9 +17,9 @@ export default function WhatWeDo() {
         <div className="row align-items-center g-5">
           <div className="col-lg-6 fade-up">
             <div className="section-label">What We Do</div>
-            <h2 className="section-title">If you can sketch your workflow, <span className="grad-blue-purple">we can build the app</span></h2>
+            <h2 style={{fontWeight:600}} className="section-title">If you can sketch your workflow, <span className="grad-blue-red">we can build the app</span></h2>
             <p style={{ fontSize: '1.02rem', color: '#475569', lineHeight: 1.8, marginBottom: 20, fontFamily: 'Inter,sans-serif' }}>
-              Zoho Creator is one of the most flexible low-code platforms in the world — but only when it's set up right. Most teams hit a wall the moment they need real automation, complex permissions, or systems that talk to each other.
+              Zoho Creator is one of the most flexible low-code platforms in the world - but only when it's set up right. Most teams hit a wall the moment they need real automation, complex permissions, or systems that talk to each other.
             </p>
             <p style={{ fontSize: '1.02rem', color: '#475569', lineHeight: 1.8, marginBottom: 28, fontFamily: 'Inter,sans-serif' }}>
               That's where working with the right team matters. When you're looking to hire a Zoho Creator developer, we transform your messy processes into clean, easy-to-use apps that your team will use every day.
@@ -31,7 +31,7 @@ export default function WhatWeDo() {
               ))}
             </div>
 
-            <a href="#consultation" className="btn-primary-custom ahover">
+            <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" target="_blank" rel="noreferrer" className="btn-primary-custom ahover">
               Book a free 30-min discovery call <i className="bi bi-arrow-right" />
             </a>
           </div>

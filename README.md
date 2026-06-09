@@ -52,7 +52,7 @@ zoflowx/
 | `--light`     | `#faf9f7`  | Page background               |
 | `--violet`    | `#8b5cf6`  | Mid-gradient stop             |
 
-- **Heading font:** Plus Jakarta Sans 800
+- **Heading font:** inter Sans 800
 - **Body font:** Inter 400/500/600
 - **Gradient signature:** `linear-gradient(90deg, #3b82f6, #8b5cf6, #f97316)`
 
@@ -78,5 +78,5 @@ zoflowx/
 - **React 18**
 - **Bootstrap 5** (grid only)
 - **Bootstrap Icons**
-- **Plus Jakarta Sans + Inter** (Google Fonts)
+- **inter Sans + Inter** (Google Fonts)
 - No additional dependencies — pure React hooks

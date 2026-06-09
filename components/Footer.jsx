@@ -7,12 +7,12 @@ export default function Footer() {
       <div className="container position-relative">
         <div className="row g-5">
           <div className="col-lg-4">
-            <div style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '1.6rem', fontWeight: 800, color: '#fff', marginBottom: 12, letterSpacing: '-0.5px' }}>ZoFlowX</div>
+            <div style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '1.6rem', fontWeight: 600, color: '#fff', marginBottom: 12, letterSpacing: '-0.5px' }}>ZoFlowX</div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8, padding: '5px 12px', marginBottom: 18 }}>
               <span>⭐</span><span style={{ fontSize: '0.72rem', fontWeight: 600, color: 'rgba(255,255,255,0.75)', fontFamily: 'Inter,sans-serif' }}>Zoho Authorized Partner</span>
             </div>
             <p style={{ fontSize: '0.88rem', maxWidth: 320, lineHeight: 1.7, color: 'rgba(255,255,255,0.55)', fontFamily: 'Inter,sans-serif' }}>
-              India's leading Zoho partner. We design and build custom Zoho Creator apps that fit your workflow — for clients across India, USA, UK, UAE, Singapore and Australia.
+              India's leading Zoho partner. We design and build custom Zoho Creator apps that fit your workflow - for clients across India, USA, UK, UAE, Singapore and Australia.
             </p>
             <div style={{ marginTop: 22, display: 'flex', gap: 10 }}>
               {[
@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
 
           <div className="col-6 col-lg-2">
-            <div style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '1.8px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 18 }}>Company</div>
+            <div style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '1.8px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 18 }}>Company</div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {['About Us','Case Studies','Blog','Contact Us','Privacy Policy'].map(l => (
                 <li key={l} style={{ marginBottom: 11 }}>
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
 
           <div className="col-6 col-lg-3">
-            <div style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '1.8px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 18 }}>Services</div>
+            <div style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '1.8px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 18 }}>Services</div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               {['Zoho Creator Custom Apps','Hire Zoho Creator Developer','Zoho Customization','Zoho Integration','Zoho One Setup'].map(l => (
                 <li key={l} style={{ marginBottom: 11 }}>
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
 
           <div className="col-lg-3">
-            <div style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '1.8px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 18 }}>Contact</div>
+            <div style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '1.8px', textTransform: 'uppercase', color: 'rgba(255,255,255,0.45)', marginBottom: 18 }}>Contact</div>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
               <li style={{ marginBottom: 11 }}>
                 <a href="mailto:info@zoflowx.com" style={{ color: 'rgba(255,255,255,0.55)', textDecoration: 'none', fontSize: '0.88rem', fontFamily: 'Inter,sans-serif', display: 'inline-flex', alignItems: 'center', gap: 8, transition: 'color 0.2s' }}

@@ -32,8 +32,8 @@ export default function Process() {
               How It Works
             </span>
           </div>
-          <h2 style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: 'clamp(1.95rem,4.2vw,3rem)', fontWeight: 800, color: '#fff', marginBottom: 16, letterSpacing: '-0.6px', lineHeight: 1.12 }}>
-            From first call to live app — <span style={{ background: 'linear-gradient(90deg,#93c5fd,#f97316)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>in 5 steps</span>
+          <h2 style={{ fontFamily: 'inter Sans,sans-serif', fontSize: 'clamp(1.95rem,4.2vw,3rem)', fontWeight: 600, color: '#fff', marginBottom: 16, letterSpacing: '-0.6px', lineHeight: 1.12 }}>
+            From first call to live app - <span style={{ background: 'linear-gradient(90deg,#93c5fd,#f97316)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>in 5 steps</span>
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.02rem', maxWidth: 640, margin: '0 auto', fontFamily: 'Inter,sans-serif', lineHeight: 1.7 }}>
             Most agencies use Zoho Creator as a black box. We see it as an open discussion. Here's exactly how a project flows when you work with India's leading Zoho partner.
@@ -57,8 +57,8 @@ export default function Process() {
                 }}>
                   <i className={`bi ${s.icon}`} />
                 </div>
-                <div style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.72rem', fontWeight: 800, color: '#f97316', letterSpacing: 2, marginBottom: 6 }}>STEP {s.num}</div>
-                <h3 style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '1rem', fontWeight: 700, color: '#fff', marginBottom: 8, lineHeight: 1.3 }}>{s.title}</h3>
+                <div style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '0.72rem', fontWeight: 600, color: '#f97316', letterSpacing: 2, marginBottom: 6 }}>STEP {s.num}</div>
+                <h3 style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '1rem', fontWeight: 700, color: '#fff', marginBottom: 8, lineHeight: 1.3 }}>{s.title}</h3>
                 <p style={{ fontSize: '0.82rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.65, fontFamily: 'Inter,sans-serif', padding: '0 6px', marginBottom: 0 }}>{s.desc}</p>
               </div>
             ))}
@@ -77,8 +77,8 @@ export default function Process() {
                 <i className={`bi ${s.icon}`} />
               </div>
               <div style={{ paddingTop: 8 }}>
-                <div style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '0.7rem', fontWeight: 800, color: '#f97316', letterSpacing: 2, marginBottom: 4 }}>STEP {s.num}</div>
-                <h3 style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: '1.05rem', fontWeight: 700, color: '#fff', marginBottom: 6 }}>{s.title}</h3>
+                <div style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '0.7rem', fontWeight: 600, color: '#f97316', letterSpacing: 2, marginBottom: 4 }}>STEP {s.num}</div>
+                <h3 style={{ fontFamily: 'inter Sans,sans-serif', fontSize: '1.05rem', fontWeight: 700, color: '#fff', marginBottom: 6 }}>{s.title}</h3>
                 <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.65)', lineHeight: 1.6, fontFamily: 'Inter,sans-serif' }}>{s.desc}</p>
               </div>
             </div>

@@ -84,20 +84,20 @@ export default function Hero() {
         </div>
 
         {/* H1 */}
-        <h1 style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: 'clamp(2.3rem,5.3vw,4rem)', fontWeight: 800, color: '#0f172a', marginBottom: 22, letterSpacing: '-1.1px', lineHeight: 1.08, maxWidth: 920, margin: '0 auto 22px' }}>
-          Custom <span className="grad-blue-purple">Zoho Creator</span> apps,<br />
-          built for the way your <span className="grad-purple-orange">business actually runs</span>
+        <h1 style={{ fontFamily: 'inter Sans,sans-serif', fontSize: 'clamp(2.3rem,5.3vw,4rem)', fontWeight: 600, color: '#0f172a', marginBottom: 22, letterSpacing: '-1.1px', lineHeight: 1.08, maxWidth: 920, margin: '0 auto 22px' }}>
+          Custom <span className="grad-blue-red">Zoho Creator</span> apps,<br />
+          built for the way your <span className="grad-blue-red">business actually runs</span>
         </h1>
 
         <p style={{ fontSize: '1.1rem', color: '#475569', maxWidth: 640, margin: '0 auto 38px', lineHeight: 1.75, fontFamily: 'Inter,sans-serif' }}>
-          Don't force your team to use spreadsheets and off-the-shelf software. We create, develop and deploy custom Zoho Creator apps that fit your workflow — from concept to live in <strong style={{ color: '#0f172a' }}>weeks, not months</strong>.
+          Don't force your team to use spreadsheets and off-the-shelf software. We create, develop and deploy custom Zoho Creator apps that fit your workflow - from concept to live in <strong style={{ color: '#0f172a' }}>weeks, not months</strong>.
         </p>
 
         <div style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 64 }}>
-          <a href="#consultation" className="btn-gradient ahover" style={{ padding: '0.85rem 1.9rem', fontSize: '0.95rem' }}>
+          <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" target="_blank" rel="noreferrer" className="btn-gradient ahover" style={{ padding: '0.85rem 1.9rem', fontSize: '0.95rem' }}>
             Get Your Free App Blueprint <i className="bi bi-arrow-right" />
           </a>
-          <a href="#services" style={{ background: '#fff', color: '#0f172a', border: '2px solid #e8e3dd', borderRadius: 10, padding: '0.78rem 1.9rem', fontFamily: 'Plus Jakarta Sans,sans-serif', fontWeight: 700, fontSize: '0.95rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8, transition: 'all 0.2s' }}
+          <a href="#services" style={{ background: '#fff', color: '#0f172a', border: '2px solid #e8e3dd', borderRadius: 10, padding: '0.78rem 1.9rem', fontFamily: 'inter Sans,sans-serif', fontWeight: 700, fontSize: '0.95rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8, transition: 'all 0.2s' }}
             onMouseEnter={e => { e.currentTarget.style.borderColor = '#0f172a'; e.currentTarget.style.transform = 'translateY(-2px)' }}
             onMouseLeave={e => { e.currentTarget.style.borderColor = '#e8e3dd'; e.currentTarget.style.transform = '' }}
           >
@@ -105,11 +105,11 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Stats — premium glass card */}
+        {/* Stats - premium glass card */}
         <div ref={statsRef} style={{
           display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 0,
           padding: '36px 32px', background: '#fff',
-          border: '1px solid #e8e3dd', borderRadius: 24, maxWidth: 880, margin: '0 auto',
+          border: '1px solid #e8e3dd', borderRadius: 24, maxWidth: 1320, margin: '0 auto',
           boxShadow: '0 24px 60px rgba(15,23,42,0.07), 0 1px 0 rgba(255,255,255,0.5) inset',
           position: 'relative', overflow: 'hidden',
         }}>
@@ -117,7 +117,7 @@ export default function Hero() {
           {stats.map((s, i) => (
             <div key={s.label} style={{ textAlign: 'center', padding: '8px 12px', borderRight: i < stats.length - 1 ? '1px solid #e8e3dd' : 'none' }}>
               <div className="stat-num" data-target={s.num} data-suffix={s.suffix}
-                style={{ fontFamily: 'Plus Jakarta Sans,sans-serif', fontSize: 'clamp(2rem,3vw,2.6rem)', fontWeight: 800, background: 'linear-gradient(135deg,#3b82f6,#8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: 1 }}>
+                style={{ fontFamily: 'inter Sans,sans-serif', fontSize: 'clamp(2rem,3vw,2.6rem)', fontWeight: 600, background: 'linear-gradient(135deg,#3b82f6,#8b5cf6)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', lineHeight: 1 }}>
                 0{s.suffix}
               </div>
               <div style={{ fontSize: '0.82rem', color: '#64748b', marginTop: 8, fontFamily: 'Inter,sans-serif', lineHeight: 1.4 }}>{s.label}</div>
