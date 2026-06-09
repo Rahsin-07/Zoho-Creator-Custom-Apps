@@ -38,7 +38,7 @@ export default function FAQ() {
         </div>
 
         <div className="row justify-content-center">
-          <div className="col-lg-9">
+          <div className="col-lg-11">
             <div className="fade-up">
               {faqs.map((faq, i) => {
                 const isOpen = open === i
@@ -91,7 +91,7 @@ export default function FAQ() {
               })}
             </div>
 
-            <div className="fade-up text-center" style={{ marginTop: 32, padding: '24px', background: '#f5f0eb', borderRadius: 14 }}>
+        <div className="fade-up text-center" style={{ marginTop: 32, padding: '38px 44px', background: '#f5f0eb', borderRadius: 14 }}>
               <div style={{ fontSize: '0.92rem', color: '#475569', marginBottom: 14, fontFamily: 'Inter,sans-serif' }}>Still have questions?</div>
               <a href="https://arul-zoflowx.zohobookings.in/#/Zoho_Consultation" target="_blank" rel="noreferrer" className="btn-gradient ahover">Ask ZoFlowX a Question <i className="bi bi-arrow-right" /></a>
             </div>
