@@ -8,9 +8,19 @@ const channels = [
   { icon: 'bi-telephone',  color: '#dc2626', label: 'Call',     value: '+91 81900 09222', href: 'tel:+918190009222',           sub: 'Mon–Sat, 9am–11pm IST' },
 ]
 
+const services = [
+  'Build a new Zoho Creator app',
+  'Fix or improve an existing Zoho setup',
+  'Full Zoho One implementation',
+  'Zoho CRM customization & extensions',
+  'Workflow & automation design',
+  'Audit & advisory only',
+  'Not sure yet — need guidance',
+]
+
 export default function GetInTouch() {
   const ref = useRef(null)
-  const [form, setForm] = useState({ name: '', email: '', phone: '', requirement: '' })
+  const [form, setForm] = useState({ name: '', email: '', phone: '', service: '', requirement: '' })
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -27,7 +37,7 @@ export default function GetInTouch() {
   const handleSubmit = () => {
     const subject = encodeURIComponent(`New Zoho requirement from ${form.name || 'website'}`)
     const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\n\nRequirement:\n${form.requirement}`
+      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone}\nService: ${form.service || 'Not specified'}\n\nRequirement:\n${form.requirement}`
     )
     window.location.href = `mailto:info@zoflowx.com?subject=${subject}&body=${body}`
   }
@@ -39,7 +49,7 @@ export default function GetInTouch() {
     transition: 'border-color 0.2s, box-shadow 0.2s',
   }
   const focus = (e) => { e.target.style.borderColor = '#2563eb'; e.target.style.boxShadow = '0 0 0 3px rgba(37,99,235,0.12)' }
-  const blur = (e) => { e.target.style.borderColor = '#e8e3dc'; e.target.style.boxShadow = 'none' }
+  const blur  = (e) => { e.target.style.borderColor = '#e8e3dc'; e.target.style.boxShadow = 'none' }
 
   return (
     <section id="get-in-touch" ref={ref} style={{ background: '#fff', position: 'relative', overflow: 'hidden' }}>
@@ -118,6 +128,42 @@ export default function GetInTouch() {
                   <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: 7, fontFamily: 'Inter,sans-serif' }}>Phone Number</label>
                   <input type="tel" value={form.phone} onChange={set('phone')} onFocus={focus} onBlur={blur} placeholder="+91 ..." style={inputStyle} />
                 </div>
+
+                {/* ── Service dropdown ── */}
+                <div className="col-12">
+                  <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: 7, fontFamily: 'Inter,sans-serif' }}>
+                    What do you need help with? <span style={{ color: '#dc2626' }}>*</span>
+                  </label>
+                  <div style={{ position: 'relative' }}>
+                    <select
+                      value={form.service}
+                      onChange={set('service')}
+                      onFocus={focus}
+                      onBlur={blur}
+                      style={{
+                        ...inputStyle,
+                        appearance: 'none',
+                        WebkitAppearance: 'none',
+                        paddingRight: 42,
+                        color: form.service ? '#0b1220' : '#94a3b8',
+                        cursor: 'pointer',
+                      }}
+                    >
+                      <option value="" disabled>Select a service</option>
+                      {services.map(s => (
+                        <option key={s} value={s} style={{ color: '#0b1220' }}>{s}</option>
+                      ))}
+                    </select>
+                    {/* Custom chevron icon */}
+                    <div style={{
+                      position: 'absolute', right: 14, top: '50%', transform: 'translateY(-50%)',
+                      pointerEvents: 'none', color: '#64748b', fontSize: '0.9rem',
+                    }}>
+                      <i className="bi bi-chevron-down" />
+                    </div>
+                  </div>
+                </div>
+
                 <div className="col-12">
                   <label style={{ display: 'block', fontSize: '0.82rem', fontWeight: 700, color: '#334155', marginBottom: 7, fontFamily: 'Inter,sans-serif' }}>Your Requirement</label>
                   <textarea value={form.requirement} onChange={set('requirement')} onFocus={focus} onBlur={blur} rows={4} placeholder="Tell us what you need help with…" style={{ ...inputStyle, resize: 'vertical' }} />
